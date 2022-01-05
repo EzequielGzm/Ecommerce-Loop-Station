@@ -17,10 +17,10 @@
       <% if(session) { %>
          <% for(let i=0; i<usuarios.length;i++) {%> 
             <p style="color: #ab191f;font-size: 28px; text-align: center;"> Usuario: <span
-                  style="font-weight: 900;"><%= usuarios[i].usuario  %> </span> </p>
+                  style="font-weight: 900;"><%=usuarios[i].usuario%> </span> </p>
             
          <div class="perfilContainer">
-            <img src="/img/users/<%= usuarios[i].imagen %>">
+            <img src="/img/users/<%=usuarios[i].imagen%>">
          
 
             <div class="datos">

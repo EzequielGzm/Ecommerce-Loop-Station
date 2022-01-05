@@ -16,7 +16,8 @@
       <section class="containerProductos">
          <% for(let i=0;  i<lista_productos.length;i++ ) {%>
          <div class="producto">
-            <a href="/detalleProducto/<%= lista_productos[i].id %>"><img src="img/products/<%= lista_productos[i].imagen %>"
+            <a href="/detalleProducto/<%=lista_productos[i].id%>">
+               <img src="img/products/<%=lista_productos[i].imagen%>"
                   class="producto__img"></a>
             <div class="productDescription">
                <h3 class="producto__title"> <%= lista_productos[i].nombre %> </h3>
@@ -45,20 +46,7 @@
 
            
 
-           <!--  <form enctype="multipart/form-data" action="/cart/<%= lista_productos[i].id %>" method="POST">
 
-
-               <div id="qtyDesktop" class="quantity buttons_added">
-                  <input type="button" value="-" class="minus">
-                  <input type="number" step="1" min="1" max="" id="cantidadProductos_id" title="Qty"
-                     class="input-text qty text" size="4" pattern="" name="qty" inputmode="">
-                  <input type="button" value="+" class="plus">
-               </div>
-
-               <a id="btnNonHover"><button type="submit" class="btn">Agregar al carrito</button></a>
-
-
-            </form> -->
          </div>
          <% } %>
       </section>

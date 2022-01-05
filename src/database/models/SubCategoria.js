@@ -6,35 +6,24 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
-        },
-        nombre: {
-            type: dataTypes.STRING(50)
-        },
+            autoIncrement: true},
+        nombre: {type: dataTypes.STRING(50) },
         fkCategoria: {
             type: dataTypes.INTEGER,
-            references: {
-                model: Categoria,
-                key: 'id',
-              }
-        }
-    };
+            references: { model: Categoria, key: 'id',}}};
     let config = {
         tableName: 'subCategorias',
-        timestamps: false
-    };
+        timestamps: false };
+
     const SubCategoria = sequelize.define(alias, cols, config)
 
     SubCategoria.associate = function(models){
         SubCategoria.belongsTo(models.Categoria,{
             as: 'categoria',
-            foreignKey: 'fkCategoria'
-        })
+            foreignKey: 'fkCategoria'})
         SubCategoria.hasMany(models.Producto,{
             as: 'producto',
-            foreignKey: 'fkSubCategoria'
-        })
-    } 
+            foreignKey: 'fkSubCategoria'})} 
 
     return SubCategoria;
 }

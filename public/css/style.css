@@ -42,7 +42,10 @@ body{
 	outline: inherit;
 }
 
-
+.whatsapp img {
+   width: 150px;
+   z-index: 1;;
+}
 /**************************MOBILE***********************************/
 @media (max-width: 480px) {
     
@@ -89,4 +92,8 @@ body{
         flex: 1;
         overflow: auto;
     }
+
+
+
+
 }

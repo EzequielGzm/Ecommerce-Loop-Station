@@ -7,16 +7,6 @@
     "test": "nodemon src/app.js",
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tadeogavensky/grupo_3_proyectoIntegrador.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tadeogavensky/grupo_3_proyectoIntegrador/issues"
-  },
-  "homepage": "https://github.com/tadeogavensky/grupo_3_proyectoIntegrador#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",

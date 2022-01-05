@@ -4,32 +4,22 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true
-        },
-        nombre: {
-            type: dataTypes.STRING(50)
-        },
-        imagen: {
-            type: dataTypes.BLOB    
-        },
-    };
+            autoIncrement: true },
+        nombre: { type: dataTypes.STRING(50)},
+        imagen: { type: dataTypes.BLOB    },};
     let config = {
         tableName: 'categorias',
-        timestamps: false
-    };
+        timestamps: false};
     
     const Categoria = sequelize.define(alias, cols, config)
 
     Categoria.associate = function(models){
         Categoria.hasMany(models.SubCategoria,{
             as: 'sub_categoria',
-            foreignKey: 'fkCategoria'
-        })
-        Categoria.hasMany(models.Producto,{
+            foreignKey: 'fkCategoria' })
+    Categoria.hasMany(models.Producto,{
             as: 'producto',
-            foreignKey: 'fkCategoria'
-        }) 
-    } 
+            foreignKey: 'fkCategoria'}) } 
 
     return Categoria;
 }

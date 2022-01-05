@@ -21,29 +21,18 @@ window.onload = function (e){
 
  /*  e = e || window.event;
   var s = String.fromCharCode( e.keyCode || e.which ); */
-  if (detect(e)) {  
-    alert('ACTIVADAS')          
-    cont = 1
-  } else {
-    alert('DESACTIVADAS')
-    cont = 2
-  }
- alert(cont)
- }
-
-
-
-
-
+  if (detect(e)) { alert('ACTIVADAS')          
+  cont = 1} 
+  else {alert('DESACTIVADAS')
+  cont = 2}
+  alert(cont)}
+  
 body.addEventListener("keydown", function (event) {
 
-  if (event.keyCode === 20 && (cont % 2 == 1)) {
-    Toast.fire()
-    cont++;
-  } else if ((event.keyCode === 20 && (cont % 2 == 0))) {
-    Toast.fire({
-      title: 'Mayúsculas desactivadas',
-    })
+  if (event.keyCode === 20 && (cont % 2 == 1)) { Toast.fire() 
+     cont++;}
+    else if ((event.keyCode === 20 && (cont % 2 == 0))) {
+    Toast.fire({ title: 'Mayúsculas desactivadas', })
     cont++;
   }
 

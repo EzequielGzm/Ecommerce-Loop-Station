@@ -1,7 +1,7 @@
 <html>
 <%- include("partials/head", {session:session}) %>
 
-<body>
+<body>  <!-- marcas: locals.marcas-->
    <%- include("partials/quantity.ejs", {session:session, marcas: locals.marcas}) %>
    <div class="headerOriginal">
       <%- include("partials/header", {session:session}) %>
@@ -18,8 +18,9 @@
          <% for(let i=0;  i<lista_productos.length;i++ ) {%>
 
          <div class="producto">
-            <a href="/detalleProducto/<%= lista_productos[i].id %>"><img
-                  src="img/products/<%= lista_productos[i].imagen %> "></a>
+            <a href="/detalleProducto/<%=lista_productos[i].id%>">
+               <img  src="img/products/<%=lista_productos[i].imagen%> ">
+            </a>
 
 
             <div class="productDescription">
