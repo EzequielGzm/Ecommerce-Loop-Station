@@ -5,7 +5,7 @@ const Op = db.sequelize.Op;
 
 /* let array = []; */
 
-const ApiProductController = {
+const productosControllerApi = {
   list: (req, res) => {
     let promesaProducto = db.Producto.findAll({
       where: { deleted: 0 },
@@ -122,4 +122,4 @@ const ApiProductController = {
   },
 };
 
-module.exports = ApiProductController;
+module.exports = productosControllerApi;
