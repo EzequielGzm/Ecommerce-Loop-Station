@@ -75,6 +75,7 @@ const productosControllerApi = {
         let json = {
           meta: { length: productos.length },
           datos: { productos, categorias },
+          url: '/api/productos'
         };
         res.json(json);
       }
@@ -116,6 +117,7 @@ const productosControllerApi = {
       let json = {
         meta: "detalle",
         data: producto,
+        url: '/api/productos'
       };
       res.json(json);
     });

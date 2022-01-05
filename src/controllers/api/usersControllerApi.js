@@ -30,6 +30,7 @@ const usuariosControllerApi = {
         status: 200,
         meta: { usuariosLength: usuarios.length },
         datos: { usuarios },
+        url: 'api/usuarios'
       };
       res.json(json);
     });
@@ -54,6 +55,7 @@ const usuariosControllerApi = {
         status: 200,
         meta: "detalle",
         data: usuario,
+        url: 'api/usuarios'
       };
       res.json(json);
     });
