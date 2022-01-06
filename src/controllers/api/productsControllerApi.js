@@ -12,7 +12,6 @@ const productosControllerApi = {
       attributes: {
         exclude: [
           "precio",
-          "imagen",
           "fkMarca",
           "fkSubCategoria",
           "fkCategoria",
@@ -70,6 +69,8 @@ const productosControllerApi = {
         productos.forEach((element) => {
           element.dataValues.detail =
             "http://localhost:4010/api/productos/detail/" + element.id;
+            element.dataValues.imagen =
+            "http://localhost:4010/img/products/" + element.imagen;
         });
 
         let json = {

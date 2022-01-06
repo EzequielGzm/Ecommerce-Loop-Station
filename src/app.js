@@ -4,6 +4,7 @@ const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const cors = require('cors')
 
 const cookieMiddleware = require('./middlewares/cookieMiddleware');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
@@ -23,6 +24,7 @@ const apiUsuarios = require("./routes/api/usuarios")
 
 
 //Static Files
+app.use(cors())
 app.use(express.static(public))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
