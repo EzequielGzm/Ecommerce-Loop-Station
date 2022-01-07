@@ -74,6 +74,7 @@ if(campoPassword.value!==campoPassword2.value){
 if(errores.length>0){
     e.preventDefault();
     let ulErrores=document.querySelector("div.errores ul")
+    ulErrores.innerHTML = ""
     for (let i = 0; i < errores.length; i++) {
         ulErrores.innerHTML += "<li>"+ errores[i];+"</li>"   }}  
 else{formulario.submit()}        

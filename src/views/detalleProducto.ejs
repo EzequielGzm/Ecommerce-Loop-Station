@@ -32,16 +32,18 @@
                      <p style="margin-top: 80px; color: green;"> %<%= 100 - (((producto.precio - (producto.precio * 20 / 100)) * 100 ) / producto.precio) %> OFF </p>
                      <% } %>
                   </div> 
-                  <button class="compraB"> Añadir al carrito</button>
+                  <form enctype="multipart/form-data" action="/cart/<%= producto.id %>" method="POST">
+                  <a class="compraB" href = "/cart"> Añadir al carrito</a>
+                  </form> 
                <div style="margin-top: 100px;" id="quantity_unProducto" class="quantity buttons_added">
                   <input style="width:100px; height: 50px;" type="button" value="-" class="minus"><input style="width:100px; height: 50px;" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input style="width:100px; height: 50px;" type="button" value="+" class="plus">
                </div>
 
                <div class="botones" style="flex-direction: row;">
                 <% if(locals.session) { %>  
-                  <form enctype="multipart/form-data" action="/cart/<%= producto.id %>" method="POST">
+                  <!-- <form enctype="multipart/form-data" action="/cart/<%= producto.id %>" method="POST">
                      <a href="/cart"><button style="width:100px; height: 50px;" class="btn">Agregar al carrito</button></a>
-                  </form> 
+                  </form>  -->
                   <% if(locals.session.fkRol == 1) { %> 
                      <a href="/editar/<%= producto.id %>"><button style="width:100px; height: 50px;" class="btn">Editar producto</button></a>
                      <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST"  style="display: inline-flex">
