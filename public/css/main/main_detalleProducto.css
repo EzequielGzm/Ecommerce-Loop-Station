@@ -1,6 +1,6 @@
 
 .main_detalleProducto{
-    background-color: lightgray;
+    
     margin-bottom: 45px;
 }
 .unProducto{
@@ -46,7 +46,32 @@
     border-bottom: 1px solid #eaeaea;
     padding-left: 8%;
 }
-
+.compraB{
+    background: green;
+  background-image: -webkit-linear-gradient(top, green, green);
+  background-image: -moz-linear-gradient(top, green, green);
+  background-image: -ms-linear-gradient(top, green, green);
+  background-image: -o-linear-gradient(top, green, green);
+  background-image: linear-gradient(to bottom, green, green);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  }
+  
+  .compraB:hover {
+    background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  }
 .price-row{
     display: flex;
     flex-direction: row;

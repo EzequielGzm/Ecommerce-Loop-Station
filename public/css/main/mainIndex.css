@@ -8,9 +8,14 @@
 .sectionEnOferta{
     padding-left: 10vw;
     padding-right: 10vw;
+    background-image: url("../../img/pfondo3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
-.containerMain{
+/* .containerMain{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,8 +25,35 @@
     background-color: #bebdbd;
     margin-top: 5vh;
     margin-bottom: 5vh;
+} */
+.containerMain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space:nowrap;
+    margin-bottom: 5vh;
+    
 }
 
+.containerMain::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  .containerMain::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  .containerMain::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #ab191f;
+  }
 .containerEnOferta{
     display: flex; 
     flex-direction: column; 
@@ -39,15 +71,22 @@
     width: 100%;
     height: 70%;
     border-bottom: lightgray solid 1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
 }
 
 .productoHome{
     background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .categoriaHome-wrapper img{
     object-fit: cover;
     width: 100%;
+    border-radius: 20px;
+
 }
 .categoriaHome-wrapper p{
    text-transform: uppercase;
@@ -59,10 +98,18 @@
     justify-content: center;
     padding-left: 10vw;
     padding-right: 10vw;
+    background-image: url("../../img/pfondo3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .categoriaHome-wrapper h3{
     position: relative;
-    right: 33vw;
+    color: whitesmoke;
+    font-size: 30px;
+    
 }
 .categoriaHome-columns1{
     -webkit-column-count: 2;
@@ -92,7 +139,7 @@
     font-size: 30px;
     height: 7vh;
     margin: 0;
-    padding-right: 50px;
+    
 }
 .categoriaHome-columns2 a{
     text-decoration: none;
@@ -104,7 +151,7 @@
     font-size: 30px;
     height: 7vh;
     margin: 0;
-    padding-right: 50px;
+    border-radius: 10px;
 }
 .categoriaHome-columns1 a{
     text-decoration: none;

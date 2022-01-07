@@ -56,15 +56,6 @@ const productosControllerApi = {
 
     Promise.all([promesaProducto, promesaCategoriaPr]).then(
       ([productos, categorias]) => {
-        /*  categorias.forEach(objCat => {
-
-        let cat = categorias.find(obj =>
-            obj.nombre == objCat.nombre
-        )
-        array.push({
-            [cat.nombre]: cat.count 
-        })
-    }) */
 
         productos.forEach((element) => {
           element.dataValues.detail =

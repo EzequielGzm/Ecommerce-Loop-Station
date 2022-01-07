@@ -21,21 +21,21 @@
                </div>
             </div>
             <div class="detalle_unProducto">
+               <p style="font-size: 20px;">Marca: <b><%= producto.marca.nombre %></b></p>
+               
                <p><b><%= producto.nombre %></b></p>
-              <div class="price-row">
-               <% if(producto.enOferta == 1){ %> 
-                  <p style="margin-top: 80px; text-decoration: line-through; padding-right: 5%;">$<%= producto.precio %></p>
-                  <p style="margin-top: 80px; padding-right: 20px; color: green;">$<%= producto.precio - ( producto.precio*20/100) %> </p>
-                  <p style="margin-top: 80px; color: green;"> %<%= 100 - (((producto.precio - (producto.precio * 20 / 100)) * 100 ) / producto.precio) %> OFF </p>
-               <% } %>
-               </div> 
-               <p>Marca: <b><%= producto.marca.nombre %></b></p>
                <p style="font-size: 20px;"> <%= producto.descripcion %></p>
+               <div class="price-row">
+                  <% if(producto.enOferta == 1){ %> 
+                     <p style="margin-top: 80px; text-decoration: line-through; padding-right: 5%;">$<%= producto.precio %></p>
+                     <p style="margin-top: 80px; padding-right: 20px; color: green;">$<%= producto.precio - ( producto.precio*20/100) %> </p>
+                     <p style="margin-top: 80px; color: green;"> %<%= 100 - (((producto.precio - (producto.precio * 20 / 100)) * 100 ) / producto.precio) %> OFF </p>
+                     <% } %>
+                  </div> 
+                  <button class="compraB"> Añadir al carrito</button>
                <div style="margin-top: 100px;" id="quantity_unProducto" class="quantity buttons_added">
                   <input style="width:100px; height: 50px;" type="button" value="-" class="minus"><input style="width:100px; height: 50px;" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input style="width:100px; height: 50px;" type="button" value="+" class="plus">
                </div>
-
-               
 
                <div class="botones" style="flex-direction: row;">
                 <% if(locals.session) { %>  

@@ -1,6 +1,10 @@
 <header>
    <a class="imgMobile" href=""><img id="logoMobile" src="/img/stuff/logo.png" /></a>
    <div class="flex">
+      <div class="flex">
+         <a class="icon" href="/" id="home"> <i class="fas fa-home"></i> </a>
+         <a href="/"><img id="logoDesktop" src="/img/stuff/LogoNegro.png" /></a>
+      </div>
       <div class="dropdown-menu">
          <a id="barras" class="icon" href="#"> <i class="fas fa-bars"></i> </a>
          <div class="dropdown-content-menu">
@@ -19,24 +23,8 @@
                   <% } %>
                </div>
             </div>
-<!--  --------------------------------- no poner
-            <a id="separador"> | </a>
-            <div class="dropdown-categories">
-               <form action="/productosBuscadosPorSubCategoria/<%= locals.categoriaRandom.nombre %>" method="POST"
-                  enctype="multipart/form-data">
-                  <button style=" background-color: transparent;" class="clearButton" type="submit">
-                     <a class="menu"
-                        style="border-radius: 100px; text-transform: uppercase; padding-left: 15px; padding-right: 15px;">
-                        PRODUCTOS RANDOM </a>
-                  </button>
-               </form>
-            </div>
-         -->
+
          </div>
-      </div>
-      <div class="flex">
-         <a class="icon" href="/" id="home"> <i class="fas fa-home"></i> </a>
-         <a href="/"><img id="logoDesktop" src="/img/stuff/LogoNegro.png" /></a>
       </div>
       <div style="display: flex; flex-direction: row; padding-top: 3vh;">
          <div class="search-boxDesktop">
